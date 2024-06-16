@@ -1,257 +1,263 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>AWS 認定クラウドプラクティショナー</title>
+    <meta name="author" content="Moriaki Kogure" />
+    <link rel="stylesheet" href="./asset/style.css" />
+    <link rel="icon" href="favicon.ico" />
+  </head>
 
-<head>
-  <meta charset="utf-8" />
-  <title>AWS 認定クラウドプラクティショナー</title>
-  <meta name="author" content="Moriaki Kogure" />
-  <link rel="stylesheet" href="./asset/style.css" />
-  <link rel="icon" href="favicon.ico" />
-</head>
+  <body>
+    <h1>AWS 認定クラウドプラクティショナー</h1>
 
-<body>
-  <h1>AWS 認定クラウドプラクティショナー</h1>
+    <h4>資格概要</h4>
+    <blockquote>
+      <a
+        href="https://aws.amazon.com/jp/certification/certified-cloud-practitioner/"
+        target="_blank"
+        >AWS 認定クラウドプラクティショナー</a
+      >
+    </blockquote>
 
-  <h4>資格概要</h4>
-  <blockquote>
-    <a href="https://aws.amazon.com/jp/certification/certified-cloud-practitioner/" target="_blank">AWS
-      認定クラウドプラクティショナー</a>
-  </blockquote>
+    <h4>以下書籍の内容まとめ</h4>
+    <blockquote>
+      <a
+        href="https://www.amazon.co.jp/%E5%BE%B9%E5%BA%95%E6%94%BB%E7%95%A5-AWS%E8%AA%8D%E5%AE%9A-%E3%82%AF%E3%83%A9%E3%82%A6%E3%83%89%E3%83%97%E3%83%A9%E3%82%AF%E3%83%86%E3%82%A3%E3%82%B7%E3%83%A7%E3%83%8A%E3%83%BC%E6%95%99%E7%A7%91%E6%9B%B8-%E3%83%88%E3%83%AC%E3%83%8E%E3%82%B1%E3%83%BC%E3%83%88%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE-%E9%AB%98%E5%B1%B1%E8%A3%95%E5%8F%B8/dp/4295016799"
+        target="_blank"
+        >徹底攻略 AWS認定 クラウドプラクティショナー教科書</a
+      >
+    </blockquote>
 
-  <h4>以下書籍の内容まとめ</h4>
-  <blockquote>
-    <a href="https://www.amazon.co.jp/%E5%BE%B9%E5%BA%95%E6%94%BB%E7%95%A5-AWS%E8%AA%8D%E5%AE%9A-%E3%82%AF%E3%83%A9%E3%82%A6%E3%83%89%E3%83%97%E3%83%A9%E3%82%AF%E3%83%86%E3%82%A3%E3%82%B7%E3%83%A7%E3%83%8A%E3%83%BC%E6%95%99%E7%A7%91%E6%9B%B8-%E3%83%88%E3%83%AC%E3%83%8E%E3%82%B1%E3%83%BC%E3%83%88%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE-%E9%AB%98%E5%B1%B1%E8%A3%95%E5%8F%B8/dp/4295016799"
-      target="_blank">徹底攻略 AWS認定 クラウドプラクティショナー教科書</a>
-  </blockquote>
+    <h4>学習進捗</h4>
 
-  <h4>学習進捗</h4>
-
-  <div>
-    <span id="practice-progress"></span>
-    <button id="reset-btn">進捗リセット</button>
-  </div>
-
-  <h4>
-    <span>コンテンツ</span>
-    <div class="toggle-box-wrapper">
-      <input type="checkbox" class="toggle-box" id="toggle-show-complete-content">
-      <label for="toggle-show-complete-content" class="toggle-box-label">学習済みコンテンツを表示</label>
+    <div>
+      <span id="practice-progress"></span>
+      <button id="reset-btn">進捗リセット</button>
     </div>
-  </h4>
-  <div id="page-tree"></div>
-
-  <h2>第1章 クラウドコンピューティングの概要</h2>
-
-  <h3>1-1 クラウドコンピューティングとは</h3>
-
-  <h4><m-b>オンプレミス</m-b></h4>
-  <p>
-    従来の、自社で構築・運用するシステム構成のこと。
-  </p>
-
-  <h4>クラウドコンピューティングの4つの特徴</h4>
-  <ul>
-    <li><m-b>他社所有</m-b></li>
-    <li><m-b>従量課金</m-b></li>
-    <li><m-b>インターネット越しの利用</m-b></li>
-    <li><m-b>オンデマンド・セルフサービス</m-b></li>
-  </ul>
-
-  <h3>1-2 クラウドコンピューティングの概念</h3>
-
-  <h4>オンプレやレンタルサーバなどと比較した5つの特徴</h4>
-  <ul>
-    <li><m-b>On-demand self-service</m-b></li>
-    <li><m-b>Broad network access</m-b></li>
-    <li><m-b>Resource pooling</m-b></li>
-    <li><m-b>Rapid elasticity</m-b></li>
-    <li><m-b>Measured service</m-b></li>
-  </ul>
-
-  <h4>クラウドコンピューティングの4つの展開モデル</h4>
-  <ul>
-    <li><m-b>パブリッククラウド</m-b></li>
-    <li><m-b>プライベートクラウド</m-b></li>
-    <li><m-b>コミュニティクラウド</m-b></li>
-    <li><m-b>ハイブリッドクラウド</m-b></li>
-  </ul>
-  <p>
-    クラウド + オンプレミス ⇒ <m-b>ハイブリッドクラウド</m-b><br>
-    クラウドA + クラウドB ⇒ <m-b>マルチクラウド</m-b>
-  </p>
-
-  <h2>第2章 クラウドのコンセプト</h2>
-
-  <h3>2-1 AWSクラウドの利点</h3>
-
-  <h4><m-b>セキュリティ</m-b></h4>
-  <p>
-    様々な基準への対応、第三者機関による<m-b>監査</m-b>、データの暗号化など。
-  </p>
-
-  <h4><m-b>信頼性</m-b></h4>
-  <p>
-    ハードウェアやソフトウェアの故障や不具合により、データの消失やシステムの故障が発生しにくい状態。
-    また、故障した状態から早期に復旧できる能力。
-  </p>
-
-  <h4><m-b>可用性</m-b></h4>
-  <p>
-    壊れにくさ、稼働している状態を維持する能力。<br>
-    AWS Lambda ⇒ <m-b>マネージドサービス</m-b><br>
-    Amazon EC2 ⇒ <m-b>アンマネージドサービス</m-b>
-  </p>
 
-  <h4><m-b>伸縮性</m-b></h4>
-  <p>
-    必要に応じてリソースを増減できること。
-    英語で<m-b>elastic</m-b>という。
-  </p>
+    <h4>
+      <span>コンテンツ</span>
+      <div class="toggle-box-wrapper">
+        <input
+          type="checkbox"
+          class="toggle-box"
+          id="toggle-show-complete-content"
+        />
+        <label for="toggle-show-complete-content" class="toggle-box-label"
+          >学習済みコンテンツを表示</label
+        >
+      </div>
+    </h4>
+    <div id="page-tree"></div>
+
+    <h2>第1章 クラウドコンピューティングの概要</h2>
+
+    <h3>1-1 クラウドコンピューティングとは</h3>
+
+    <h4><m-b>オンプレミス</m-b></h4>
+    <p>従来の、自社で構築・運用するシステム構成のこと。</p>
+
+    <h4>クラウドコンピューティングの4つの特徴</h4>
+    <ul>
+      <li><m-b>他社所有</m-b></li>
+      <li><m-b>従量課金</m-b></li>
+      <li><m-b>インターネット越しの利用</m-b></li>
+      <li><m-b>オンデマンド・セルフサービス</m-b></li>
+    </ul>
+
+    <h3>1-2 クラウドコンピューティングの概念</h3>
+
+    <h4>オンプレやレンタルサーバなどと比較した5つの特徴</h4>
+    <ul>
+      <li><m-b>On-demand self-service</m-b></li>
+      <li><m-b>Broad network access</m-b></li>
+      <li><m-b>Resource pooling</m-b></li>
+      <li><m-b>Rapid elasticity</m-b></li>
+      <li><m-b>Measured service</m-b></li>
+    </ul>
+
+    <h4>クラウドコンピューティングの4つの展開モデル</h4>
+    <ul>
+      <li><m-b>パブリッククラウド</m-b></li>
+      <li><m-b>プライベートクラウド</m-b></li>
+      <li><m-b>コミュニティクラウド</m-b></li>
+      <li><m-b>ハイブリッドクラウド</m-b></li>
+    </ul>
+    <p>
+      クラウド + オンプレミス ⇒ <m-b>ハイブリッドクラウド</m-b><br />
+      クラウドA + クラウドB ⇒ <m-b>マルチクラウド</m-b>
+    </p>
+
+    <h2>第2章 クラウドのコンセプト</h2>
+
+    <h3>2-1 AWSクラウドの利点</h3>
+
+    <h4><m-b>セキュリティ</m-b></h4>
+    <p>
+      様々な基準への対応、第三者機関による<m-b>監査</m-b>、データの暗号化など。
+    </p>
+
+    <h4><m-b>信頼性</m-b></h4>
+    <p>
+      ハードウェアやソフトウェアの故障や不具合により、データの消失やシステムの故障が発生しにくい状態。
+      また、故障した状態から早期に復旧できる能力。
+    </p>
+
+    <h4><m-b>可用性</m-b></h4>
+    <p>
+      壊れにくさ、稼働している状態を維持する能力。<br />
+      AWS Lambda ⇒ <m-b>マネージドサービス</m-b><br />
+      Amazon EC2 ⇒ <m-b>アンマネージドサービス</m-b>
+    </p>
+
+    <h4><m-b>伸縮性</m-b></h4>
+    <p>
+      必要に応じてリソースを増減できること。 英語で<m-b>elastic</m-b>という。
+    </p>
 
-  <h4><m-b>俊敏性</m-b></h4>
-  <p>
-    必要なリソースをすぐに準備できること。
-    また、学習済みもモデルを利用したAIサービスやビッグデータ分析などの既存サービスを利用し、準備時間を短縮できること。
-  </p>
+    <h4><m-b>俊敏性</m-b></h4>
+    <p>
+      必要なリソースをすぐに準備できること。
+      また、学習済みもモデルを利用したAIサービスやビッグデータ分析などの既存サービスを利用し、準備時間を短縮できること。
+    </p>
 
-  <h4><m-b>従量課金モデル</m-b></h4>
-  <p>
-    利用した時間に応じて課金されるモデルのこと。
-  </p>
+    <h4><m-b>従量課金モデル</m-b></h4>
+    <p>利用した時間に応じて課金されるモデルのこと。</p>
 
-  <h4><m-b>スケーラビリティ</m-b></h4>
-  <p>
-    拡張可能なこと。
-  </p>
+    <h4><m-b>スケーラビリティ</m-b></h4>
+    <p>拡張可能なこと。</p>
 
-  <h4><m-b>規模の経済性</m-b></h4>
-  <p>
-    利用者が日々増え続けることで効率化が進み、結果として継続的な値下げが行われていること。
-  </p>
+    <h4><m-b>規模の経済性</m-b></h4>
+    <p>
+      利用者が日々増え続けることで効率化が進み、結果として継続的な値下げが行われていること。
+    </p>
 
-  <h3>2-2 クラウドの経済性</h3>
+    <h3>2-2 クラウドの経済性</h3>
 
-  <h4><m-b>TCO</m-b>について</h4>
-  <p>
-    オンプレミスとクラウドのコストを比較する際、コスト構造が異なるため、単純比較ができない。
-    その際に用いるべき考え方として<m-b>TCO</m-b>(<m-b>Total Cost of Ownership</m-b>:<m-b>総所有コスト</m-b>)がある。
-    これはある程度の期間を想定した<m-b>初期コスト</m-b>と<m-b>ランニングコスト</m-b>を加味したコストである。
-  </p>
+    <h4><m-b>TCO</m-b>について</h4>
+    <p>
+      オンプレミスとクラウドのコストを比較する際、コスト構造が異なるため、単純比較ができない。
+      その際に用いるべき考え方として<m-b>TCO</m-b>(<m-b
+        >Total Cost of Ownership</m-b
+      >:<m-b>総所有コスト</m-b>)がある。
+      これはある程度の期間を想定した<m-b>初期コスト</m-b>と<m-b>ランニングコスト</m-b>を加味したコストである。
+    </p>
 
-  <h4>AWSならではのコスト削減の考え方</h4>
-  <ul>
-    <li><m-b>オンプレミスからAmazon EC2への移行</m-b></li>
-    <li><m-b>マネージドデータベースサービスの利用</m-b></li>
-    <li><m-b>サーバレスコンピューティングの利用</m-b></li>
-    <li><m-b>SaaSサービスの利用</m-b></li>
-  </ul>
+    <h4>AWSならではのコスト削減の考え方</h4>
+    <ul>
+      <li><m-b>オンプレミスからAmazon EC2への移行</m-b></li>
+      <li><m-b>マネージドデータベースサービスの利用</m-b></li>
+      <li><m-b>サーバレスコンピューティングの利用</m-b></li>
+      <li><m-b>SaaSサービスの利用</m-b></li>
+    </ul>
 
-  <h3>2-3 クラウドアーキテクチャの設計原則</h3>
+    <h3>2-3 クラウドアーキテクチャの設計原則</h3>
 
-  <h4><m-b>Design for failure</m-b></h4>
-  <p>
-    Amazon.comのCTOであるWerner Vogles氏の「Everything fails, all the time」という言葉をベースとした設計原則。
-  </p>
+    <h4><m-b>Design for failure</m-b></h4>
+    <p>
+      Amazon.comのCTOであるWerner Vogles氏の「Everything fails, all the
+      time」という言葉をベースとした設計原則。
+    </p>
 
-  <h4><m-b>Well-Architectedフレームワーク</m-b></h4>
-  <p>
-    AWSを活用してシステム設計を行う上で、指標となるフレームワーク。
-    次の<m-b>6つの柱</m-b>と呼ばれるジャンルごとの設計原則とベストプラクティスで構成される。
-  </p>
-  <ul>
-    <li><m-b>オペレーションエクセレンスの柱</m-b></li>
-    <li><m-b>セキュリティの柱</m-b></li>
-    <li><m-b>信頼性の柱</m-b></li>
-    <li><m-b>パフォーマンス効率の柱</m-b></li>
-    <li><m-b>コスト最適化の柱</m-b></li>
-    <li><m-b>持続可能性の柱</m-b></li>
-  </ul>
+    <h4><m-b>Well-Architectedフレームワーク</m-b></h4>
+    <p>
+      AWSを活用してシステム設計を行う上で、指標となるフレームワーク。
+      次の<m-b>6つの柱</m-b>と呼ばれるジャンルごとの設計原則とベストプラクティスで構成される。
+    </p>
+    <ul>
+      <li><m-b>オペレーションエクセレンスの柱</m-b></li>
+      <li><m-b>セキュリティの柱</m-b></li>
+      <li><m-b>信頼性の柱</m-b></li>
+      <li><m-b>パフォーマンス効率の柱</m-b></li>
+      <li><m-b>コスト最適化の柱</m-b></li>
+      <li><m-b>持続可能性の柱</m-b></li>
+    </ul>
 
-  <h2>第3章 セキュリティとコンプライアンス</h2>
+    <h2>第3章 セキュリティとコンプライアンス</h2>
 
-  <h3>3-1 責任共有モデル</h3>
+    <h3>3-1 責任共有モデル</h3>
 
-  <h3>3-2 コンプライアンス</h3>
+    <h3>3-2 コンプライアンス</h3>
 
-  <h3>3-3 データの暗号化</h3>
+    <h3>3-3 データの暗号化</h3>
 
-  <h3>3-4 モニタリング</h3>
+    <h3>3-4 モニタリング</h3>
 
-  <h3>3-5 アクセス管理</h3>
+    <h3>3-5 アクセス管理</h3>
 
-  <h3>3-6 仮想ファイアウォール</h3>
+    <h3>3-6 仮想ファイアウォール</h3>
 
-  <h3>3-7 アプリケーションを攻撃から守る</h3>
+    <h3>3-7 アプリケーションを攻撃から守る</h3>
 
-  <h3>3-8 セキュリティを評価する</h3>
+    <h3>3-8 セキュリティを評価する</h3>
 
-  <h2>第4章 AWS環境の構築</h2>
+    <h2>第4章 AWS環境の構築</h2>
 
-  <h3>4-1 AWS環境の構築と運用</h3>
+    <h3>4-1 AWS環境の構築と運用</h3>
 
-  <h3>4-2 グローバルインフラストラクチャ</h3>
+    <h3>4-2 グローバルインフラストラクチャ</h3>
 
-  <h2>第5章 コンピューティングサービス</h2>
+    <h2>第5章 コンピューティングサービス</h2>
 
-  <h3>5-1 AWSのコンピューティング環境</h3>
+    <h3>5-1 AWSのコンピューティング環境</h3>
 
-  <h3>5-2 Amazon Elastic Compute Cloud (Amazon EC2)</h3>
+    <h3>5-2 Amazon Elastic Compute Cloud (Amazon EC2)</h3>
 
-  <h3>5-3 Amazon EC2 Auto Scaling</h3>
+    <h3>5-3 Amazon EC2 Auto Scaling</h3>
 
-  <h3>5-4 Elastic Load Balancing</h3>
+    <h3>5-4 Elastic Load Balancing</h3>
 
-  <h3>5-5 コンテナの実行</h3>
+    <h3>5-5 コンテナの実行</h3>
 
-  <h3>5-6 AWS Lambda</h3>
+    <h3>5-6 AWS Lambda</h3>
 
-  <h3>5-7 その他のコンピューティングサービス</h3>
+    <h3>5-7 その他のコンピューティングサービス</h3>
 
-  <h2>第6章 ストレージサービス</h2>
+    <h2>第6章 ストレージサービス</h2>
 
-  <h3>6-1 ストレージの種類</h3>
+    <h3>6-1 ストレージの種類</h3>
 
-  <h3>6-2 Amazon Elastic Block Store (Amazon EBS)</h3>
+    <h3>6-2 Amazon Elastic Block Store (Amazon EBS)</h3>
 
-  <h3>6-3 Amazon Simple Storage Service (Amazon S3)</h3>
+    <h3>6-3 Amazon Simple Storage Service (Amazon S3)</h3>
 
-  <h3>6-4 ファイルストレージサービス</h3>
+    <h3>6-4 ファイルストレージサービス</h3>
 
-  <h3>6-5 その他のストレージサービス</h3>
+    <h3>6-5 その他のストレージサービス</h3>
 
-  <h2>第7章 ネットワークサービス</h2>
+    <h2>第7章 ネットワークサービス</h2>
 
-  <h3>7-1 ネットワークとIPアドレス</h3>
+    <h3>7-1 ネットワークとIPアドレス</h3>
 
-  <h3>7-2 Amazon Virtual Private Cloud</h3>
+    <h3>7-2 Amazon Virtual Private Cloud</h3>
 
-  <h3>7-3 その他のネットワークサービス</h3>
+    <h3>7-3 その他のネットワークサービス</h3>
 
-  <h2>第8章 データベース・その他サービス</h2>
+    <h2>第8章 データベース・その他サービス</h2>
 
-  <h3>8-1 Amazon Relational Database Service</h3>
+    <h3>8-1 Amazon Relational Database Service</h3>
 
-  <h3>8-2 Amazon DynamoDB</h3>
+    <h3>8-2 Amazon DynamoDB</h3>
 
-  <h3>8-3 その他のデータベースサービス</h3>
+    <h3>8-3 その他のデータベースサービス</h3>
 
-  <h3>8-4 その他のサービス</h3>
+    <h3>8-4 その他のサービス</h3>
 
-  <h2>第9章 請求と料金モデル</h2>
+    <h2>第9章 請求と料金モデル</h2>
 
-  <h3>9-1 料金モデル</h3>
+    <h3>9-1 料金モデル</h3>
 
-  <h3>9-2 マルチアカウントの請求</h3>
+    <h3>9-2 マルチアカウントの請求</h3>
 
-  <h3>9-3 コスト管理</h3>
+    <h3>9-3 コスト管理</h3>
 
-  <h3>9-4 サポートプラン</h3>
+    <h3>9-4 サポートプラン</h3>
 
-  <h3>9-5 その他のサポートツール</h3>
+    <h3>9-5 その他のサポートツール</h3>
 
-  <script src="./asset/dexie.min.js"></script>
-  <script src="./asset/jquery-3.7.1.slim.min.js"></script>
-  <script src="./asset/script.js"></script>
-</body>
-
+    <script src="./asset/dexie.min.js"></script>
+    <script src="./asset/jquery-3.7.1.slim.min.js"></script>
+    <script src="./asset/script.js"></script>
+  </body>
 </html>
