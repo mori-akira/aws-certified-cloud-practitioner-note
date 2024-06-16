@@ -474,78 +474,73 @@
 
     <h4>AWSとの接続方法</h4>
     <ul>
-        <li><m-b>パブリックインターネット</m-b></li>
-        <li><m-b>インターネットVPN</m-b></li>
-        <li><m-b>プライベート専用線</m-b></li>
+      <li><m-b>パブリックインターネット</m-b></li>
+      <li><m-b>インターネットVPN</m-b></li>
+      <li><m-b>プライベート専用線</m-b></li>
     </ul>
 
     <h4><m-b>マネジメントコンソール</m-b></h4>
-    <p>
-        Webから使用できるGUI管理ツール。
-    </p>
+    <p>Webから使用できるGUI管理ツール。</p>
 
     <h4><m-b>AWS CLI</m-b></h4>
-    <p>
-        コマンドを用いた管理ツール。
-    </p>
+    <p>コマンドを用いた管理ツール。</p>
 
     <h4><m-b>AWS SDK</m-b></h4>
-    <p>
-        アプリケーション開発用に用意されたプログラミング用ライブラリ。
-    </p>
+    <p>アプリケーション開発用に用意されたプログラミング用ライブラリ。</p>
 
     <h4><m-b>AWS CloudFormation</m-b></h4>
     <p>
-        AWSリソースの作成、更新、削除を自動化するIaCサービス。<br>
-        <m-b>JSON</m-b>または<m-b>YAML</m-b>フォーマットで記述されたテンプレートを用いてリソースを管理する。
-        テンプレートから作成されたリソースの集合を<m-b>Stack</m-b>と呼ぶ。
+      AWSリソースの作成、更新、削除を自動化するIaCサービス。<br />
+      <m-b>JSON</m-b
+      >または<m-b>YAML</m-b>フォーマットで記述されたテンプレートを用いてリソースを管理する。
+      テンプレートから作成されたリソースの集合を<m-b>Stack</m-b>と呼ぶ。
     </p>
 
     <h4><m-b>AWS Elastic Beanstalk</m-b></h4>
     <p>
-        Webアプリケーションの実行環境を自動構築するサービス。<br>
-        マネジメントコンソールやCLIからパラメータを指定することで、実行環境を構築する。
+      Webアプリケーションの実行環境を自動構築するサービス。<br />
+      マネジメントコンソールやCLIからパラメータを指定することで、実行環境を構築する。
     </p>
 
     <h4><m-b>AWS Service Catalog</m-b></h4>
     <p>
-        AWS上で動作するアプリケーションやインフラストラクチャを、他のユーザの要求に応じて提供するカタログサービス。
+      AWS上で動作するアプリケーションやインフラストラクチャを、他のユーザの要求に応じて提供するカタログサービス。
     </p>
 
     <h3>4-2 グローバルインフラストラクチャ</h3>
 
     <h4>AWSグローバルインフラストラクチャを構成する要素</h4>
     <table>
-        <thead>
-            <tr>
-                <th>要素</th>
-                <th>説明</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><m-b>リージョン</m-b></td>
-                <td>
-                    最も大きい構成単位。
-                    物理的なデータセンターが集積された拠点の地域を表す。<br>
-                    <m-b>2</m-b>つ以上の下位要素から構成される。
-                </td>
-            </tr>
-            <tr>
-                <td><m-b>アベイラビリティゾーン</m-b></td>
-                <td>
-                    <m-b>1</m-b>つ以上の物理的なデータセンターの集合。<br>
-                    この要素間は<m-b>1~2ms</m-b>程度のレイテンシで通信が可能。
-                    また、データセンター同士は<m-b>100km</m-b>以内で<m-b>数km~数十km</m-b>程度離れる設計となっている。
-                </td>
-            </tr>
-            <tr>
-                <td><m-b>エッジロケーション</m-b></td>
-                <td>
-                    低遅延な配信や世界規模の可用性を実現するため配置される、AWSと直接通信を行うデータセンター。
-                </td>
-            </tr>
-        </tbody>
+      <thead>
+        <tr>
+          <th>要素</th>
+          <th>説明</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><m-b>リージョン</m-b></td>
+          <td>
+            最も大きい構成単位。
+            物理的なデータセンターが集積された拠点の地域を表す。<br />
+            <m-b>2</m-b>つ以上の下位要素から構成される。
+          </td>
+        </tr>
+        <tr>
+          <td><m-b>アベイラビリティゾーン</m-b></td>
+          <td>
+            <m-b>1</m-b>つ以上の物理的なデータセンターの集合。<br />
+            この要素間は<m-b>1~2ms</m-b>程度のレイテンシで通信が可能。
+            また、データセンター同士は<m-b>100km</m-b>以内で<m-b>数km~数十km</m-b>程度離れる設計となっている。
+          </td>
+        </tr>
+        <tr>
+          <td><m-b>エッジロケーション</m-b></td>
+          <td>
+            低遅延な配信や世界規模の可用性を実現するため配置される、AWSと直接通信を行うデータセンター。
+          </td>
+        </tr>
+      </tbody>
     </table>
 
     <h2>第5章 コンピューティングサービス</h2>
@@ -554,25 +549,304 @@
 
     <h4>主なコンピューティングサービスの種別</h4>
     <ul>
-        <li><m-b>仮想マシン</m-b></li>
-        <li><m-b>コンテナ</m-b></li>
-        <li><m-b>サーバーレス</m-b></li>
+      <li><m-b>仮想マシン</m-b></li>
+      <li><m-b>コンテナ</m-b></li>
+      <li><m-b>サーバーレス</m-b></li>
     </ul>
 
     <h3>5-2 Amazon Elastic Compute Cloud (Amazon EC2)</h3>
 
     <h4>EC2インスタンス作成の流れ</h4>
     <ol>
-        <li><m-b>Amazon Machine Image</m-b>の選択</li>
-        <li><m-b>インスタンスタイプ</m-b>の選択</li>
-        <li><m-b>ストレージ</m-b>の選択</li>
-        <li><m-b>ネットワーク</m-b>の選択</li>
-        <li><m-b>その他</m-b>の選択</li>
+      <li><m-b>Amazon Machine Image</m-b>の選択</li>
+      <li><m-b>インスタンスタイプ</m-b>の選択</li>
+      <li><m-b>ストレージ</m-b>の選択</li>
+      <li><m-b>ネットワーク</m-b>の選択</li>
+      <li><m-b>その他</m-b>の選択</li>
     </ol>
+
+    <h4><m-b>Amazon Machine Image</m-b></h4>
+    <p>
+      OSやアプリケーションがインストールされたEC2インスタンスのひな型。
+      ユーザは選択するだけで、必要なOSやアプリケーションを構築できる。<br />
+      Amazonが用意しているもの、カスタムしたもの、<m-b>Amazon Marketplace</m-b
+      >から購入できるサードパーティが提供するものなどがある。
+    </p>
+
+    <h4>インスタンスタイプ</h4>
+    <table>
+      <thead>
+        <tr>
+          <th>インスタンスタイプ</th>
+          <th>特徴</th>
+          <th>主な用途</th>
+          <th>ファミリー</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><m-b>汎用</m-b></td>
+          <td>バランスの取れたタイプ</td>
+          <td>
+            <ul>
+              <li><m-b>Webサーバ</m-b></li>
+              <li><m-b>APサーバ</m-b></li>
+              <li>開発サーバ</li>
+            </ul>
+          </td>
+          <td class="no-wrappable">
+            <ul>
+              <li><m-b>T</m-b></li>
+              <li><m-b>M</m-b></li>
+              <li><m-b>A</m-b></li>
+              <li><m-b>Mac</m-b></li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td><m-b>コンピューティング最適化</m-b></td>
+          <td>高い計算能力</td>
+          <td>
+            <ul>
+              <li>負荷の高いAPサーバ</li>
+              <li><m-b>バッチサーバ</m-b></li>
+            </ul>
+          </td>
+          <td class="no-wrappable">
+            <ul>
+              <li><m-b>C</m-b></li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td><m-b>メモリ最適化</m-b></td>
+          <td>メモリを多く搭載</td>
+          <td>
+            <ul>
+              <li><m-b>DBサーバ</m-b></li>
+              <li><m-b>キャッシュサーバ</m-b></li>
+              <li>大量の非構造化データのリアルタイム処理</li>
+            </ul>
+          </td>
+          <td class="no-wrappable">
+            <ul>
+              <li><m-b>R</m-b></li>
+              <li><m-b>X</m-b></li>
+              <li><m-b>z</m-b>など</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td><m-b>高速コンピューティング</m-b></td>
+          <td>グラフィック演算や推論処理に最適化</td>
+          <td>
+            <ul>
+              <li><m-b>浮動小数点演算</m-b></li>
+              <li><m-b>グラフィック処理</m-b></li>
+              <li><m-b>機械学習</m-b></li>
+            </ul>
+          </td>
+          <td class="no-wrappable">
+            <ul>
+              <li><m-b>P</m-b></li>
+              <li><m-b>G</m-b>など</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td><m-b>ストレージ最適化</m-b></td>
+          <td>高速・大容量のストレージ</td>
+          <td>
+            <ul>
+              <li><m-b>分散ファイルシステム</m-b></li>
+              <li><m-b>データウェアハウス</m-b></li>
+            </ul>
+          </td>
+          <td class="no-wrappable">
+            <ul>
+              <li><m-b>I</m-b></li>
+              <li><m-b>D</m-b>など</li>
+            </ul>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h4>インスタンスタイプの命名規則</h4>
+    <p>
+      <span style="margin-left: 0.3rem">t</span>
+      <span style="margin-left: 1rem">4</span>
+      <span style="margin-left: 1rem">g</span>
+      <span style="margin-left: 1rem">.small</span><br />
+      <span>①</span>
+      <span style="margin-left: 0.5rem">②</span>
+      <span style="margin-left: 0.6rem">③</span>
+      <span style="margin-left: 1.8rem">④</span>
+    </p>
+    <ul>
+      <li>①: <m-b>インスタンスファミリー</m-b></li>
+      <li>②: <m-b>世代</m-b></li>
+      <li>③: <m-b>オプション</m-b></li>
+      <li>④: <m-b>インスタンスサイズ</m-b></li>
+    </ul>
+
+    <h4>Amazon EC2の料金体系</h4>
+    <table>
+      <thead>
+        <tr>
+          <th>料金体系</th>
+          <th>説明</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><m-b>オンデマンドインスタンス</m-b></td>
+          <td>EC2インスタンスが起動している時間に対して課金する体系。</td>
+        </tr>
+        <tr>
+          <td><m-b>スポットインスタンス</m-b></td>
+          <td>
+            AWS上で余っているEC2のキャパシティを、オンデマンドと比較して最大<m-b>90%</m-b>安く利用できる体系。<br />
+            AWS側のキャパシティが不足してきた場合などに、利用中のインスタンスが中断される可能性がある。
+          </td>
+        </tr>
+        <tr>
+          <td><m-b>リザーブドインスタンス</m-b></td>
+          <td>
+            特定のEC2インスタンスに対する課金ではなく、<m-b>1年</m-b>または<m-b>3年</m-b>の利用を確約することで、
+            最大<m-b>72%</m-b>の割引を受けることのできる体系。<br />
+            購入した条件にマッチするインスタンス料金を定額で使うことができるが、
+            マッチするインスタンスが存在しない場合も料金が発生してしまう点は注意が必要。
+          </td>
+        </tr>
+        <tr>
+          <td><m-b>Savings Plans</m-b></td>
+          <td>
+            特定のEC2インスタンスに対する課金ではなく、<m-b>1年</m-b>または<m-b>3年</m-b>の利用を確約することで、
+            最大<m-b>72%</m-b>の割引を受けることのできる体系。
+            1時間当たりどれくらいの利用料金を予定しているかを条件として購入する。<br />
+            <m-b>Compute Savings Plans</m-b
+            >は、途中でインスタンスファミリーを変更することができ、
+            <m-b>AWS Lambda</m-b>や<m-b>AWS Fargate</m-b
+            >に対して利用できる。<br />
+            <m-b>EC2 Instance Savings Plans</m-b
+            >は、EC2専用で、同一インスタンスファミリー間で自由にインスタンスタイプを変更できる。<br />
+            リザーブドインスタンスと同様に長期的な利用に向いているが、より柔軟な構成で利用が可能。
+          </td>
+        </tr>
+        <tr>
+          <td><m-b>ハードウェア専有インスタンス</m-b></td>
+          <td>
+            EC2インスタンスが起動するホストを自分たちのAWSアカウントのインスタンスだけで独占し、ホストを専有的に利用する体形。
+            ホストの指定は不可。
+          </td>
+        </tr>
+        <tr>
+          <td><m-b>Dedicated Hosts</m-b></td>
+          <td>
+            インスタンスを起動するホストを指定できる体系。 最も高い料金プラン。
+          </td>
+        </tr>
+      </tbody>
+    </table>
 
     <h3>5-3 Amazon EC2 Auto Scaling</h3>
 
+    <h4>Amazon EC2 Auto Scalingとは</h4>
+    <p>
+      EC2インスタンスの<m-b>スケールイン</m-b>と<m-b>スケールアウト</m-b>を自動で行う仕組み。
+      インスタンスの状態を<m-b>Amazon CloudWatch</m-b
+      >で収集し、<m-b>アラーム</m-b>が発報されることで自動スケールを行う。
+    </p>
+
+    <h4><m-b>起動テンプレート</m-b></h4>
+    <p>
+      Auto
+      Scalingによって起動するインスタンスの要件(AMI、インスタンスタイプなど)を定義するテンプレート。
+      通常のEC2インスタンス起動時にも選択できる。
+    </p>
+
+    <h4><m-b>Auto Scalingグループ</m-b></h4>
+    <p>
+      Auto Scalingによって起動されたインスタンスのグループ。<br />
+      <m-b>希望する容量</m-b
+      >、<m-b>最小容量</m-b>、<m-b>最大容量</m-b>を設定することができ、その容量に合わせてスケーリングを行う。
+    </p>
+
+    <h4><m-b>スケーリングポリシー</m-b></h4>
+    <p>
+      Auto Scalingが実行されるタイミングや条件を設定する仕組み。
+      次の3つのタイプがある。
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <th>ポリシー</th>
+          <th>説明</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><m-b>動的スケーリングポリシー</m-b></td>
+          <td>
+            負荷の変動が予測できない場合に利用する。アラームに条件を動的に設定し、発報されるとスケーリングを実行する。
+          </td>
+        </tr>
+        <tr>
+          <td><m-b>予定されたアクション</m-b></td>
+          <td>
+            指定した日時や周期でスケーリングを実行するもので、負荷のタイミングが予め予測可能な場合に使用する。
+          </td>
+        </tr>
+        <tr>
+          <td><m-b>予測スケーリングポリシー</m-b></td>
+          <td>
+            使用するメトリクスを指定することで、過去<m-b>14</m-b>日分のデータから機械学習によって負荷を予測し、スケーリングを起こなう。
+            細かい設定が不要だが、急激な負荷上昇は予測できない。
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
     <h3>5-4 Elastic Load Balancing</h3>
+
+    <h4>Elastic Load Balancingの種類</h4>
+    <table>
+      <thead>
+        <tr>
+          <th>種類</th>
+          <th>説明</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><m-b>Application Load Balancer</m-b></td>
+          <td>
+            HTTPまたはHTTPSリクエストを対象とした負荷分散を行う。
+            WebサーバやWebアプリケーションに特化する。
+          </td>
+        </tr>
+        <tr>
+          <td><m-b>Network Load Balancer</m-b></td>
+          <td>
+            TCPやUDPプロトコルをベースに負荷分散を行う。
+            HTTP以外のプロトコルを利用する場合や、静的なグローバルIPアドレスを必要とする場合に利用する。
+            1秒間に<m-b>数百万</m-b>リクエストを処理する。
+          </td>
+        </tr>
+        <tr>
+          <td><m-b>Gateway Load Balancer</m-b></td>
+          <td>
+            ネットワーク同士の接続に対する負荷分散を行う。
+            侵入検知やウイルスチェックなどで、サードパーティ製のセキュリティツールを通したい場合などに使用する。
+          </td>
+        </tr>
+        <tr>
+          <td><m-b>Classic Load Balancer</m-b></td>
+          <td>過去の互換性維持のために残されていて、新規では使用しない。</td>
+        </tr>
+      </tbody>
+    </table>
 
     <h3>5-5 コンテナの実行</h3>
 
