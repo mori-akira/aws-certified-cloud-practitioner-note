@@ -850,21 +850,303 @@
 
     <h3>5-5 コンテナの実行</h3>
 
+    <h4><m-b>Amazon Elastic Container Service</m-b></h4>
+    <p>
+      AWSクラウド上でDockerコンテナを管理するマネージドサービス。
+      コンテナの実行環境自体は<m-b>Amazon EC2</m-b>や<m-b>AWS Fargate</m-b
+      >を用い、 構築したコンテナに対してオーケストレーションの機能を持つ。
+    </p>
+
+    <h4><m-b>Amazon Elastic Kubernetes Service</m-b></h4>
+    <p>
+      AWS上でKubernetesを持ちいてコンテナオーケストレーションを行うサービス。
+    </p>
+
+    <h4><m-b>AWS Fargate</m-b></h4>
+    <p>サーバーレスにコンテナの実行環境を構築するサービス。</p>
+
     <h3>5-6 AWS Lambda</h3>
 
+    <h4>AWS Lambdaとは</h4>
+    <p>
+      設定したトリガに応じて、サーバーレスにプログラムコードを実行するサービス。<br />
+      <m-b>実行時間</m-b>に対して課金され(<m-b>ミリ秒</m-b>単位で算出)、
+      最大実行時間は<m-b>15</m-b>分である。
+    </p>
+
+    <h4>Lambdaがサポートする開発言語</h4>
+    <ul>
+      <li><m-b>Java</m-b></li>
+      <li><m-b>Go</m-b></li>
+      <li><m-b>PowerShell</m-b></li>
+      <li><m-b>Node.js</m-b></li>
+      <li><m-b>C#</m-b></li>
+      <li><m-b>Python</m-b></li>
+      <li><m-b>Ruby</m-b></li>
+    </ul>
+
+    <h4>Lambdaで設定できるトリガ</h4>
+    <ul>
+      <li><m-b>Amazon S3へのオブジェクトアップロード</m-b></li>
+      <li><m-b>DynamoDBのデータ更新</m-b></li>
+      <li><m-b>Amazon SQSにメッセージ保存</m-b></li>
+      <li><m-b>Amazon API Gatewayからの呼び出し</m-b></li>
+      <li><m-b>Amazon Alexaからの呼び出し</m-b></li>
+      <li><m-b>EventBridge経由の呼び出し</m-b></li>
+    </ul>
+
     <h3>5-7 その他のコンピューティングサービス</h3>
+
+    <h4><m-b>Amazon Lightsail</m-b></h4>
+    <p>
+      仮想マシン上にOS、ストレージ、ファイアウォールといった機能をひとまとめにした<m-b>VPS</m-b>(<m-b
+        >Virtual Private Server</m-b
+      >)のサービス。 WordPressやRedmineなどのCMSを簡単に構築できる。
+    </p>
+
+    <h4><m-b>Amazon WorkSpaces</m-b></h4>
+    <p>
+      AWSの<m-b>VDI</m-b>(<m-b>Virtual Desktop Infrastructure</m-b
+      >:仮想デスクトップサービス)。
+    </p>
 
     <h2>第6章 ストレージサービス</h2>
 
     <h3>6-1 ストレージの種類</h3>
 
+    <h4>AWSが提供するストレージサービスの分類</h4>
+    <ul>
+      <li><m-b>ブロックストレージ</m-b></li>
+      <li><m-b>オブジェクトストレージ</m-b></li>
+      <li><m-b>ファイルストレージ</m-b></li>
+    </ul>
+
     <h3>6-2 Amazon Elastic Block Store (Amazon EBS)</h3>
+
+    <h4>ボリュームタイプ</h4>
+    <table>
+      <thead>
+        <tr>
+          <th>ボリュームタイプ</th>
+          <th>説明</th>
+          <th>ブート使用</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><m-b>汎用SSD</m-b></td>
+          <td class="wrappable">
+            あらゆる用途に用いられる。<br />
+            最大サイズは<m-b>16TB</m-b>、最大IOPSは<m-b>16,000</m-b>、最大スループットは<m-b>1,000MB</m-b>。
+            IOPSが<m-b>3,000</m-b>を超える場合、またはスループットが<m-b>125MB</m-b>を超える場合、追加料金が発生する。
+          </td>
+          <td><m-b>可</m-b></td>
+        </tr>
+        <tr>
+          <td><m-b>プロビジョンドIOPS SSD</m-b></td>
+          <td class="wrappable">
+            <m-b>16,000</m-b>を超えるIOPS性能が必要な場合に用いられる。<br />
+            最大サイズは<m-b>64TB</m-b>、最大IOPSは<m-b>256,000</m-b>、最大スループットは<m-b>4,000MB</m-b>。
+          </td>
+          <td><m-b>可</m-b></td>
+        </tr>
+        <tr>
+          <td><m-b>スループット最適化HDD</m-b></td>
+          <td class="wrappable">
+            大規模かつ大量のファイルを扱う場合に用いられる。<br />
+            最小サイズは<m-b>125GB</m-b>で、最大サイズは<m-b>16TB</m-b>。
+          </td>
+          <td><m-b>不可</m-b></td>
+        </tr>
+        <tr>
+          <td><m-b>Cold HDD</m-b></td>
+          <td class="wrappable">
+            サイズ当たりのコスト最も安いタイプで、アクセス頻度が低い大量データを扱う場合に用いられる。<br />
+            最小サイズは<m-b>125GB</m-b>で、最大サイズは<m-b>16TB</m-b>。
+          </td>
+          <td><m-b>不可</m-b></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h4>Amazon EBSのスナップショット</h4>
+    <p>
+      Amazon
+      EBSは任意のタイミングでスナップショットを作成でき、バックアップを取ることができる。
+      これは<m-b>増分</m-b>スナップショットの仕組みをとる。<br />
+      スナップショットは<m-b>Amazon S3</m-b>に保存される。
+      この時、スナップショットの一部を削除してもその分が他のスナップショットに移動し、
+      全てのスナップショットがなくなるまでスナップショットが維持される仕組みがとられている。
+    </p>
+
+    <h4><m-b>インスタンスストア</m-b></h4>
+    <p>
+      Amazon EBSとは別に、EC2にアタッチできる揮発性のボリューム機能。
+      バッファやキャッシュに使用する。
+    </p>
 
     <h3>6-3 Amazon Simple Storage Service (Amazon S3)</h3>
 
+    <h4>Amazon S3の特徴</h4>
+    <ul>
+      <li><m-b>99.999999999%</m-b>(<m-b>イレブンナイン</m-b>)の耐久性</li>
+      <li><m-b>容量</m-b>が無制限</li>
+      <li><m-b>Web</m-b>からアクセス可能</li>
+    </ul>
+
+    <h4>アクセスコントロール</h4>
+    <table>
+      <thead>
+        <tr>
+          <th>方式</th>
+          <th>説明</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><m-b>ACL</m-b></td>
+          <td>
+            バケットまたはオブジェクトの単位で、<m-b>パブリック</m-b>または<m-b>特定のAWSアカウント</m-b>に公開するかどうかを設定できる。
+          </td>
+        </tr>
+        <tr>
+          <td><m-b>バケットポリシー</m-b></td>
+          <td>
+            バケット単位でポリシーを設定できる。
+            <m-b>Condition</m-b
+            >を利用することで、IPアドレスやアップロード/ダウンロードの操作など、きめ細かいアクセスコントロールが可能となる。
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h4><m-b>ブロックパブリックアクセス</m-b></h4>
+    <p>
+      バケット単位でパブリックアクセスを禁止する機能。
+      公開済みの既存のオブジェクトは、公開のままにすることも、まとめて非公開にすることも可能。
+    </p>
+
+    <h4>サーバーサイド暗号化に使用できる暗号鍵の方式</h4>
+    <table>
+      <thead>
+        <tr>
+          <th>暗号鍵</th>
+          <th>説明</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><m-b>SSE-S3</m-b></td>
+          <td>
+            サービスが管理している全アカウント共有の暗号鍵を利用する。<br />
+            サーバーサイドで最低限暗号化されていればよいような要件で使用できる。
+          </td>
+        </tr>
+        <tr>
+          <td><m-b>SSE-KMS</m-b></td>
+          <td>
+            各アカウント毎に用意した暗号鍵を使用する。<br />
+            暗号鍵は<m-b>AWS Key Management Service</m-b>で管理する。
+          </td>
+        </tr>
+        <tr>
+          <td><m-b>SSE-C</m-b></td>
+          <td>
+            暗号鍵をクライアント側で作成して管理する。<br />
+            暗号化と復号はサーバーサイドで行われる。<br />
+            アップロード時などのリクエストで、クライアントの暗号鍵が一緒に送付される。
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h4><m-b>バージョニング</m-b></h4>
+    <p>
+      オブジェクトの履歴を維持する機能。<br />
+      バケット単位で有効にできる。デフォルトでは<m-b>無効</m-b>。
+    </p>
+
+    <h4>ストレージクラス</h4>
+    <table>
+      <thead>
+        <tr>
+          <th>クラス</th>
+          <th>一般的なユースケース</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><m-b>S3 標準</m-b></td>
+          <td>アクセス頻度が高い</td>
+        </tr>
+        <tr>
+          <td><m-b>S3 標準 - IA</m-b></td>
+          <td>アクセス頻度が低い</td>
+        </tr>
+        <tr>
+          <td><m-b>S3 1ゾーン - IA</m-b></td>
+          <td>アクセス頻度が低く、可用性が<m-b>99.5%</m-b>でも問題ない</td>
+        </tr>
+        <tr>
+          <td><m-b>S3 Intelligent Tiering</m-b></td>
+          <td>アクセス頻度が予測できない</td>
+        </tr>
+        <tr>
+          <td><m-b>S3 Glacier</m-b></td>
+          <td>アーカイブ</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h4><m-b>ライフサイクル</m-b></h4>
+    <p>オブジェクトの移動や削除をタイムラインと共に設定できる機能。</p>
+
     <h3>6-4 ファイルストレージサービス</h3>
 
+    <h4><m-b>Amazon Elastic File System</m-b></h4>
+    <p>Linux系OS向けのファイルストレージサービス。以下の特徴を持つ。</p>
+    <ul>
+      <li><m-b>NFSv4</m-b>プロトコルを採用</li>
+      <li><m-b>マルチAZ</m-b>で利用可能</li>
+      <li><m-b>容量を気にせず利用可能</m-b></li>
+      <li>アクセス頻度に応じた<m-b>ストレージクラス</m-b></li>
+    </ul>
+
+    <h4><m-b>Amazon FSx for Windows File Server</m-b></h4>
+    <p>Windows OS向けの共有ファイルシステムを構築するサービス。</p>
+
     <h3>6-5 その他のストレージサービス</h3>
+
+    <h4><m-b>AWS Snowcone</m-b></h4>
+    <p>
+      最大8TBまたは14TBの、物理的なエッジデバイス。 データを収集して<m-b
+        >Amazon S3</m-b
+      >に転送したり、内部的に<m-b>EC2インスタンス</m-b>を起動してデータの加工や利用ができる。
+    </p>
+
+    <h4><m-b>AWS Snowball</m-b></h4>
+    <p>
+      最大80TBの容量を持つストレージとコンピューティング向けの物理デバイス。
+      オンプレ環境のデータセンターに配置するような使用を想定している。
+    </p>
+
+    <h4><m-b>AWS Snowmobile</m-b></h4>
+    <p>
+      最大100PBの容量を持つストレージの物理デバイスで、ストレージが大量に積まれたトラックを、オンプレミスのデータセンターに横付けする。
+    </p>
+
+    <h4><m-b>AWS Storage Gateway</m-b></h4>
+    <p>
+      オンプレ環境とAWS環境のストレージリソースを繋ぐことのできるサービス。
+      実データはAWSに保存しながら、オンプレ環境にキャッシュを保存するような、ハイブリッド環境を実現できる。
+    </p>
+
+    <h4><m-b>AWS Backup</m-b></h4>
+    <p>
+      AWSにおけるデータのバックアップと復元を一元的に管理できるサービス。
+      <m-b>EBS</m-b
+      >や<m-b>AMI</m-b>などの各サービスが持っているバックアップの仕組みを利用して、バックアップをスケジューリングできる。
+    </p>
 
     <h2>第7章 ネットワークサービス</h2>
 
