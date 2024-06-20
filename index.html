@@ -1288,19 +1288,352 @@
 
     <h3>8-3 その他のデータベースサービス</h3>
 
+    <h4><m-b>Amazon Redshift</m-b></h4>
+    <p>
+      ペタバイト規模のデータに対応できるSQLデータベースのデータウェアハウスサービス。
+    </p>
+
+    <h4><m-b>Amazon ElasticCache</m-b></h4>
+    <p>
+      インメモリDBと呼ばれるNoSQLデータベースの一つ。
+      OSSの<m-b>Memcached</m-b>と<m-b>Redis</m-b>から選択できる。
+    </p>
+
+    <h4><m-b>Amazon MemoryDB for Redis</m-b></h4>
+    <p>
+      Redis互換のインメモリDBサービス。
+      データの耐久性に優れ、一般的なアプリケーションのデータベースにも使用できる。
+    </p>
+
+    <h4><m-b>Amazon DocumentDB</m-b></h4>
+    <p>OSSのMongoDB互換のドキュメントDBサービス。</p>
+
+    <h4><m-b>Amazon Keyspaces</m-b></h4>
+    <p>OSSのApache Cassandra互換のワイドカラム型データベース。</p>
+
+    <h4><m-b>Amazon Neptune</m-b></h4>
+    <p>グラフデータベースのマネージドサービス。</p>
+
+    <h4><m-b>Amazon Timestream</m-b></h4>
+    <p>時系列データベースのマネージドサービス。</p>
+
+    <h4><m-b>Amazon Quantum Ledger Database</m-b></h4>
+    <p>台帳データベースのマネージドサービス。</p>
+
     <h3>8-4 その他のサービス</h3>
+
+    <h4>データ分析サービス</h4>
+    <table>
+      <thead>
+        <tr>
+          <th>サービス</th>
+          <th>説明</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><m-b>Amazon Athena</m-b></td>
+          <td>
+            Amazon
+            S3に蓄積されるオブジェクトを対象としてSQLによるデータ分析や抽出が行えるサービス。
+          </td>
+        </tr>
+        <tr>
+          <td><m-b>Amazon Kinesis</m-b></td>
+          <td>
+            動画やデータストリームをリアルタイムにAWSリソースに取り込むことができるサービス。
+          </td>
+        </tr>
+        <tr>
+          <td><m-b>Amazon QuickSight</m-b></td>
+          <td>
+            Amazon
+            Athenaのクエリ結果などを様々なグラフで可視化したり、SQLでなくパラメータを入力することでデータを可視化するBIツールのマネージドサービス。
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h4>アプリケーション統合サービス</h4>
+    <table>
+      <thead>
+        <tr>
+          <th>サービス</th>
+          <th>説明</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><m-b>Amazon Simple Notification Service</m-b></td>
+          <td>
+            一つのメッセージを複数の相手に通知できるマネージドサービス。
+            通知先としてメールやSMSを利用できる。
+          </td>
+        </tr>
+        <tr>
+          <td><m-b>Amazon Simple Queue Service</m-b></td>
+          <td>
+            シンプルに利用できるメッセージキューイングのマネージドサービス。
+          </td>
+        </tr>
+        <tr>
+          <td><m-b>Amazon EventBridge</m-b></td>
+          <td>
+            AWS上で発生する様々なイベントに対して自動的な処理を実現するマネージドサービス。
+            元々は<m-b>CloudWatch Events</m-b
+            >と呼ばれる機能がサービスに昇格している。
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h4>デベロッパサービス</h4>
+    <table>
+      <thead>
+        <tr>
+          <th>サービス</th>
+          <th>説明</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><m-b>AWS CodeCommit</m-b></td>
+          <td>
+            Gitのプライベートリモートリポジトリを作成できるマネージドサービス。
+            <m-b>IAM</m-b>によるユーザのアクセス管理ができる。
+          </td>
+        </tr>
+        <tr>
+          <td><m-b>AWS CodeBuild</m-b></td>
+          <td>
+            ソースコードのビルドとテストの自動化を行うCIを実現するマネージドサービス。
+          </td>
+        </tr>
+        <tr>
+          <td><m-b>AWS CodeDeploy</m-b></td>
+          <td>
+            EC2やLambda、コンテナなどソフトウェアのデプロイを自動化するマネージドサービス。
+          </td>
+        </tr>
+        <tr>
+          <td><m-b>AWS CodePipeline</m-b></td>
+          <td>
+            各種デベロッパーツールを繋いでCIを実現するマネージドサービス。
+          </td>
+        </tr>
+        <tr>
+          <td><m-b>AWS CodeStar</m-b></td>
+          <td>
+            広く利用されているアプリケーション開発のパターンをテンプレートから選択することで、
+            各種デベロッパーツール環境を自動構築するマネージドサービス。
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h4><m-b>Amazon Connect</m-b></h4>
+    <p>クラウドを利用したコールセンターを構築するサービス。</p>
+
+    <h4><m-b>AWS Systems Manager</m-b></h4>
+    <p>
+      AWSリソースに加えてオンプレリソースを対象として運用をサポートする様々な機能を提供するマネージドサービス。
+    </p>
 
     <h2>第9章 請求と料金モデル</h2>
 
     <h3>9-1 料金モデル</h3>
 
+    <h4>3つの無料枠</h4>
+    <ul>
+      <li><m-b>常に</m-b>無料のサービス</li>
+      <li><m-b>12カ月</m-b>無料のサービス</li>
+      <li><m-b>トライアル</m-b></li>
+    </ul>
+
+    <h4>各サービスの課金モデル</h4>
+    <table>
+      <thead>
+        <tr>
+          <th>サービス</th>
+          <th>課金モデル</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Amazon EC2</td>
+          <td>
+            インスタンスの<m-b>起動時間</m-b>に対する従量課金。
+            <m-b>リザーブドインスタンス</m-b>、<m-b>Compute Savings Plans</m-b
+            >、<m-b>スポットインスタンス</m-b>等を活用すると料金が下げられる可能性がある。
+          </td>
+        </tr>
+        <tr>
+          <td>AWS Lambda</td>
+          <td>
+            <m-b>実行時間</m-b>と<m-b>リクエスト数</m-b>にに対する課金がある。
+            どちらも無料利用枠がある。
+          </td>
+        </tr>
+        <tr>
+          <td>Amazon S3</td>
+          <td>
+            <m-b>保存した容量</m-b
+            >、<m-b>転送量</m-b>、<m-b>リクエスト数</m-b>に対する課金がある。
+            また、保存した容量によって<m-b>ボリュームディスカウント</m-b>が適用される。
+          </td>
+        </tr>
+        <tr>
+          <td>Amazon EBS</td>
+          <td>
+            <m-b>確保した容量</m-b>に対して課金される。
+            未使用でも課金されるため注意が必要。
+          </td>
+        </tr>
+        <tr>
+          <td>Amazon DynamoDB</td>
+          <td>
+            <m-b>データの読み書き</m-b
+            >と<m-b>保存した容量</m-b>に対して課金される。
+            <m-b>25GB</m-b>までは保存料金は無料枠となる。
+          </td>
+        </tr>
+        <tr>
+          <td>Amazon RDS</td>
+          <td>
+            裏で動いている<m-b>EC2インスタンスの起動時間</m-b>と<m-b>確保した容量</m-b>に対して課金される。
+            OracleやSQL
+            Serverを利用する場合、<m-b>ライセンス料</m-b>も料金に含まれる。
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
     <h3>9-2 マルチアカウントの請求</h3>
+
+    <h4><m-b>AWS Organizations</m-b></h4>
+    <p>
+      AWSアカウントを組織としてまとめる仕組み。<br />
+      AWSアカウントを<m-b>Organizations Unit</m-b
+      >(<m-b>OU</m-b>)というグループに所属させて管理する。
+      また、所属するAWSアカウントには<m-b>サービスコントロールポリシー</m-b>(<m-b>SCP</m-b>)というアクセス権限の許可リストを設定し、権限の管理を行う。
+      AWS
+      Organizationsで管理するAWSアカウントには、<m-b>管理アカウント</m-b>と<m-b>リソースアカウント</m-b>がある。<br />
+      AWS
+      Organizationsのアカウントに対する請求をまとめる機能を、<m-b>一括請求</m-b>という。<br />
+      AWS
+      Organizationsでは、EC2の<m-b>リザーブドインスタンス</m-b>で余っているインスタンスや、
+      S3の<m-b>ボリュームディスカウント</m-b>を共有することができる。
+    </p>
 
     <h3>9-3 コスト管理</h3>
 
+    <h4><m-b>AWS Pricing Calculator</m-b></h4>
+    <p>事前にAWSコストの概算を行うWebアプリケーション。</p>
+
+    <h4><m-b>AWS Budgets</m-b></h4>
+    <p>
+      毎月の予算を設定し、予算に対して発生したコストの割合を管理するサービス。
+      事前に設定した閾値に対して、<m-b>アラート通知</m-b>を行う機能もある。
+    </p>
+
+    <h4><m-b>AWS請求ダッシュボード</m-b></h4>
+    <p>
+      AWSの月ごとの請求データを可視化する機能。
+      データは<m-b>24時間</m-b>以内に最新データが反映される。
+    </p>
+
+    <h4><m-b>AWS Cost Explorer</m-b></h4>
+    <p>AWSのコストを様々な角度から分析できるサービス。</p>
+
     <h3>9-4 サポートプラン</h3>
 
+    <h4>AWSサポートの種類</h4>
+    <table>
+      <thead>
+        <tr>
+          <th>サポート</th>
+          <th>説明</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><m-b>ベーシックサポート</m-b></td>
+          <td>
+            無償で利用できるAWSサポートで、全てのAWSアカウントで利用できる。
+          </td>
+        </tr>
+        <tr>
+          <td><m-b>デベロッパーサポート</m-b></td>
+          <td>
+            アプリケーションやシステムを開発するエンジニアを対象としたサポートプラン。
+            技術的なサポートを受けることができる。
+          </td>
+        </tr>
+        <tr>
+          <td><m-b>ビジネスサポート</m-b></td>
+          <td>
+            本番環境を運用するようなビジネス用途で利用しているユーザを対象としたサポートプランで、
+            アーキテクトサポートやサポートAPIの利用ができる。
+          </td>
+        </tr>
+        <tr>
+          <td><m-b>エンタープライズサポート</m-b></td>
+          <td>
+            AWSサポートの最上位プランで、全てのサポート項目を受けることができる。
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h4>AWSプロフェッショナル</h4>
+    <p>
+      AWSには<m-b>APN</m-b>というパートナーのネットワークがあり、環境構築や設計支援を行う<m-b>コンサルティングパートナー</m-b>、
+      SaaSやAWSを活用したサービスを提供する<m-b>テクノロジーパートナー</m-b>、
+      トレーニングを専門で行う<m-b>トレーニングパートナー</m-b>などがある。
+      これらパートナーとビジネスの成功をサポートする仕組みとして、<m-b>AWSプロフェッショナルサービス</m-b>がある。
+    </p>
+
     <h3>9-5 その他のサポートツール</h3>
+
+    <h4><m-b>請求アラート</m-b></h4>
+    <p>
+      AWSの請求金額が指定の金額を超えた場合に、<m-b>CloudWatch</m-b>が通知を行う機能。
+    </p>
+
+    <h4>コスト配分タグ</h4>
+    <p>
+      AWSでは多くのリソースにタグを付与することができ、<m-b>キー</m-b>と<m-b>値</m-b>の組み合わせを管理することができる。
+      タグをコスト配分タグで有効にすると、<m-b>AWS Cost Explorer</m-b
+      >で分析することができる。
+    </p>
+
+    <h4><m-b>使用状況レポート</m-b></h4>
+    <p>
+      Savings
+      Plansやリザーブドインスタンスをどれだけ利用できているか確認する機能。
+    </p>
+
+    <h4><m-b>サービスクォータ</m-b></h4>
+    <p>
+      AWSのサービスで、作成できるリソースや利用できる量に設定された上限のこと。
+      次の3つがある。
+    </p>
+    <ul>
+      <li><m-b>状況に応じて変動するもの</m-b></li>
+      <li><m-b>固定で設定</m-b>され、<m-b>変更申請可能な</m-b>もの</li>
+      <li><m-b>固定で設定</m-b>され、<m-b>変更申請できない</m-b>もの</li>
+    </ul>
+
+    <h4><m-b>AWS Personal Health Dashboard</m-b></h4>
+    <p>
+      利用者に影響のあるメンテナンスやリソースに対する通知を確認できる機能。
+      障害が発生している場合も確認できる。
+    </p>
+
+    <h4><m-b>AWS Marketplace</m-b></h4>
+    <p>
+      AWSによって認定されたサードパーティベンダーが製品やサービスを販売するサービス。
+    </p>
 
     <script src="./asset/dexie.min.js"></script>
     <script src="./asset/jquery-3.7.1.slim.min.js"></script>
